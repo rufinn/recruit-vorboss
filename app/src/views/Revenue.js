@@ -16,7 +16,11 @@ const RecentOrders = () => {
     }
 
     return (
-        <BoardItem label={'Total Revenue'} value={data.getAllRevenue.data} />
+        <BoardItem
+            testId='BOARD_REVENUE'
+            label={'Total Revenue'}
+            value={data.getAllRevenue.data}
+        />
     )
 };
 

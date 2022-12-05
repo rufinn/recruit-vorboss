@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import './input.css';
 
-const Input = ({ caption, inputType, placeholder, onSubmit = () => {} }) => {
-
+const Input = ({ caption, inputType, placeholder, onSubmit = () => {}, testid = '' }) => {
     const [value, setValue] = useState(null);
+
+    if (!inputType) {
+        return null;
+    }
 
     const onChange = (evt) => {
         evt.preventDefault();
@@ -16,31 +19,27 @@ const Input = ({ caption, inputType, placeholder, onSubmit = () => {} }) => {
     }
 
     return (
-        <div className='input'>
+        <div data-testid={testid} className='input'>
             {
                 caption &&
-                    <label className='input__caption'>
+                    <label data-testid={`${testid}INPUT_CAPTION`} className='input__caption'>
                         { caption }: 
                     </label>
             }
-            {
-                inputType &&
-                    <input
-                        className='input__input'
-                        type={inputType}
-                        placeholder={placeholder}
-                        onChange={onChange}
-                    />
-            }
-            {
-                inputType &&
-                    <button
-                        className='input__submit'
-                        onClick={onButtonClick}
-                    >
-                        Submit
-                    </button>
-            }
+            <input
+            data-testid={`${testid}INPUT_INPUT`} 
+                className='input__input'
+                type={inputType}
+                placeholder={placeholder}
+                onChange={onChange}
+            />
+            <button
+                data-testid={`${testid}INPUT_SUBMIT`} 
+                className='input__submit'
+                onClick={onButtonClick}
+            >
+                Submit
+            </button>
         </div>
     )
 };
