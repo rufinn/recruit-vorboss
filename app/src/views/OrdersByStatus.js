@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from "@apollo/client";
-import BoardItem from '../components/BoardItem';
+import BoardItem from '../components/Board/BoardItem';
 import { QUERY_GET_ORDERS_BY_STATUS } from '../utils/requests';
 import Input from '../components/Input/Input';
 

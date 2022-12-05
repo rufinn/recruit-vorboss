@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from "@apollo/client";
-import BoardItem from '../components/BoardItem';
+import BoardItem from '../components/Board/BoardItem';
 import OrderHeader from '../components/Order/OrderHeader';
 import OrderItem from '../components/Order/OrderItem';
 import { QUERY_GET_RECENT_ORDERS } from '../utils/requests';
@@ -40,7 +40,7 @@ const RecentOrders = () => {
             <OrderHeader />
             {
                 data.getRecentOrders.data.map((item) => (
-                    <OrderItem data={item} />
+                    <OrderItem key={item.order_id} data={item} />
                 ))
             }
       </BoardItem>

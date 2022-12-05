@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from "@apollo/client";
-import BoardItem from '../components/BoardItem';
+import BoardItem from '../components/Board/BoardItem';
 import { QUERY_GET_ALL_ORDERS } from '../utils/requests';
 
 const RecentOrders = () => {
