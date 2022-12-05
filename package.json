@@ -1,0 +1,11 @@
+{
+  "name": "recruit-vorboss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:server": "npm run start -w server",
+    "start:app": "npm run start -w app"
+  },
+  "workspaces": ["app", "server"]
+}
