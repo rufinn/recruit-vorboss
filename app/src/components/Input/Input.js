@@ -12,7 +12,6 @@ const Input = ({ caption, inputType, placeholder, onSubmit = () => {} }) => {
 
     const onButtonClick = (evt) => {
         evt.preventDefault();
-        console.log('[[[ button clicked: ', value);
         onSubmit(value);
     }
 
@@ -35,7 +34,12 @@ const Input = ({ caption, inputType, placeholder, onSubmit = () => {} }) => {
             }
             {
                 inputType &&
-                    <button onClick={onButtonClick}> Submit </button>
+                    <button
+                        className='input__submit'
+                        onClick={onButtonClick}
+                    >
+                        Submit
+                    </button>
             }
         </div>
     )
