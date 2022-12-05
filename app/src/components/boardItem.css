@@ -1,0 +1,18 @@
+.board-item {
+    border-radius: 10px;
+    margin: 5vh 10vw;
+    min-height: 10vh;
+    grid-template-rows: 40% 60%;
+    grid-template-columns: auto;
+}
+
+.board-item__label {
+    background-color: rgba(132, 140, 207, 1);
+    font-weight: bold;
+    padding: 1vh 1vw;
+}
+
+.board-item__value {
+    background-color: rgba(137, 196, 244, 1);
+    padding: 1vh 1vw;
+}

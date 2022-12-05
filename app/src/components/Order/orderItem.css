@@ -1,0 +1,10 @@
+.order-item {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 1vh 1vw;
+}
+
+.order-item.header {
+    font-weight: bold;
+    text-transform: uppercase;
+}
