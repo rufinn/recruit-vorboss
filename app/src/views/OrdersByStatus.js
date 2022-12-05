@@ -25,6 +25,8 @@ const RecentOrders = () => {
     const onRecentOrdersCountSubmit = (value) => {
         if (validStatus.indexOf(value) >= 0) {
             setStatus(value);
+        } else {
+            alert('Invalid status.');
         }
     }
 
